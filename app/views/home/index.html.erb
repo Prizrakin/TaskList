@@ -1,1 +1,59 @@
 <h1></h1>
+<table>
+  <tr>
+    <td>Понедельник</td>
+    <td>Вторник</td>
+    <td>Среда</td>
+    <td>Четверг</td>
+    <td>Пятница</td>
+    <td>Субота</td>
+    <td>Воскресение</td>
+  </tr>
+
+<%nedelia = 1%>
+<%den = 1%>
+<tr>
+
+<%while nedelia <= 6 do%>
+
+  <%count = 1%>
+
+  <%while count <= 7 do%>
+
+    <%vivod = false%>
+    <%data = Time.validate(Time.new.year,Time.new.month,den)%>
+
+    <%if data != nil%>
+
+      <%if  Time.aweek(data.strftime("%A"), count) == true%>
+
+        <td>
+          <div>
+            <%=data.day %><br>
+            fff
+          </div>
+        </td>
+        <%den += 1%>
+
+      <%else%>
+
+        <td></td>
+
+      <%end%>
+
+    <%else%>
+
+      <%break%>
+
+    <%end%>
+
+    <%count += 1%>
+    
+  <%end%> 
+
+  <%nedelia += 1%>
+  </tr>
+
+<%end%>
+
+</table>
