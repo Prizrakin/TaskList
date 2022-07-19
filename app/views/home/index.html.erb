@@ -30,7 +30,11 @@
         <td>
           <div>
             <%=data.day %><br>
-            fff
+            <%if current_user%>
+              <%=Category.find(1).name%>
+            <%end%>
+
+
           </div>
         </td>
         <%den += 1%>

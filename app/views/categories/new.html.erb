@@ -1,0 +1,18 @@
+<h1>Добавить категорию</h1>
+
+<%= render 'flash'%>
+
+<%= form_with model: @category do |f| %>
+<div>
+        <div>
+            <%= f.label :name, "Название категории" %>
+        </div>
+
+        <div>
+            <%= f.text_field :name %>
+        </div>
+    </div>
+
+    <%= f.submit "Добавить"%><br>
+
+<% end %>
